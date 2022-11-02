@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    form {
+        margin: 20px 5px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: large;
+        margin-block: 0px;
+    }
+
+    button {
+        display: block;
+        margin: 20px 0px;
+    }
+</style>
+<script>  
+$(document).ready(function(){
+    $(".btn").click(function(){
+        var x =$("#inp1").val().length;
+        var y =$("#inp2").val().length;
+        if (x == 0 || y ==0 ){
+            alert(" Please fill all the fields");
+        }
+       
+    });
+});
+</script>
+<body>
+    <form id="frm">
+        <p>First Name:</p>
+        <input type="text"  id="inp1" placeholder="Micky"></input>
+        <p>Last Name:</p>
+        <input type="text"  id="inp2" placeholder="Mouse"></input>
+        <button type="button" class="btn">Submit</button>
+    </form>
+</body>
+
+</html>

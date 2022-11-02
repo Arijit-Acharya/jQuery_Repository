@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_task_4</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+    /* combination section */
+.header,
+.middle,
+footer {
+    margin: 25px;
+}
+
+.header p,
+.aside p,
+#mc p,
+#ec p,
+footer p {
+    text-align: center;
+    padding: 45px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+/* header section */
+.header {
+    height: 120px;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+/* middle section */
+.middle {
+    height: 450px;
+    padding: 5px 0px;
+}
+
+/* aside section */
+.aside {
+    height: 450px;
+    width: calc(25% - 10px);
+    background-color: rgb(126, 168, 40);
+    color: white;
+    float: left;
+}
+
+/* container section*/
+.container {
+    width: calc(75% - 10px);
+    height: 450px;
+    float: right;
+}
+
+/* main-content */
+#mc {
+    height: 300px;
+    background-color: rgb(249, 187, 30);
+    margin:0px 0px 12.5px 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* extra-content */
+#ec {
+    height: 125px;
+    background-color: gray;
+    margin: 12.5px 0px 0px 0px;
+    display: inline-block;
+    width: 100%;
+}
+#ec p {
+    padding: 25px 0px;
+}
+/* footer section */
+footer {
+    height: 120px;
+    background-color: orange;
+}
+</style>
+<body>
+     <!--  header section -->
+     <div class="header">
+        <p> Header </p>
+     </div>
+
+    <!-- middle portion -->
+    <div class="middle">
+
+        <!--sidebar section  -->
+        <div class="aside">
+            <p id="sidebar"> Sidebar </p>
+        </div>
+        <!--content section  -->
+        <div class="container">
+            <section id="mc">
+                <p> Main Content </p>
+            </section>
+            <section id="ec">
+                <p> Extra Content </p>
+            </section>
+        </div>
+    </div>
+    <!-- footer section -->
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+<script>
+$(document).ready(function(){
+    
+    $(".header").click(function(){
+        $(this).css("background-color","red");
+    });
+    $(".aside").click(function(){
+        $("#sidebar").text("Leftbar");
+    });
+    $("#ec").click(function(){
+        $("#mc").fadeOut("slow");
+    });
+});
+</script>
+</html>

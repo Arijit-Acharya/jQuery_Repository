@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_task_5</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+.header,
+.middle,
+footer {
+    margin: 15px;
+}
+.aside,
+.container {
+    margin: 1px;
+    padding: 1px;
+}
+.header {
+    height: 120px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.middle {
+    display: flex;
+    height: 450px;
+    justify-content: space-between;
+}
+.aside {
+    width: 25%;
+    background-color: rgb(126, 168, 40);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.container {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#mc{
+    height: 65%;
+    background-color: rgb(249, 187, 30);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0px;
+}
+#ec{
+    height: 23%;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0px;
+}
+footer {
+    height: 120px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.pop{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.586);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    margin: 14px 50px 50px 14px ;
+    display: none;
+}
+.pop h3{
+   margin: 300px auto;
+   width: 500px;
+   text-align: center;
+   font-weight: 400;
+}
+.popbtn{
+    background: no-repeat;
+    height: 75px;
+    width: 75px;
+    font-size: larger;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    border:transparent ;
+}
+</style>
+
+<script>
+   function togglePopup() {
+            $(".pop").toggle();
+        }
+</script>
+
+
+<body>
+    <div class="header"> Header </div>
+    <div class="middle">
+        <div class="aside"> Sidebar </div>
+        <div class="container">
+            <section id="mc"> Main Content </section>
+            <section id="ec"> Extra Content </section>
+        </div>
+    </div>
+    <footer onclick="togglePopup()"> Footer </footer>
+    <div class="pop">
+        <button class="popbtn" onclick="togglePopup()">x</button>
+       <h3> I am a popup</h3>
+    </div>
+
+</body>
+</html>

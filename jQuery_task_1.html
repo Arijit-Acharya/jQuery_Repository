@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_task_1</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin: 10px;
+    }
+    p,button{
+        margin: 10px;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            $(".box").hide();
+        });
+    });
+</script>
+<body>
+    <div class="box"></div>
+    <p>Hide the red box on button click.</p>
+    <button class="btn">Click Me</button>
+</body>
+</html>

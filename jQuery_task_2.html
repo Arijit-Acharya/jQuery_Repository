@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_task_2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".sdp").click(function(){
+                $(".hw").slideDown("slow");
+            });
+        });
+    </script>
+</head>
+<style>
+    .sdp,
+    .hw {
+        border: 2px solid grey;
+        margin: 0px 50px;
+    }
+
+    .sdp {
+        height: 20px;
+        background-color: rgb(168, 196, 121);
+        text-align: center;
+    }
+
+    .hw {
+        height: 200px;
+        background-color: lightblue;
+        text-align: center;
+        display: none;
+    }
+    p{
+        padding-top: 5%;
+    }
+</style>
+
+<body>
+    <div class="sdp">Click me to slide down pannel</div>
+    <div class="hw"> <p>Hello World!</p> </div>
+</body>
+
+</html>
