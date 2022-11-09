@@ -24,24 +24,29 @@
         margin: 20px 0px;
     }
 </style>
-<script>  
-$(document).ready(function(){
-    $(".btn").click(function(){
-        var x =$("#inp1").val().length;
-        var y =$("#inp2").val().length;
-        if (x == 0 || y ==0 ){
-            alert(" Please fill all the fields");
-        }
-       
+
+
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            const x = $(".inp");
+            let length = x.length;
+            for(let i = 0;i<length;i++ ){
+                if($(x[i]).val().trim() == ""){
+                    alert("Please enter all the fields.");
+                }
+            } 
+        });
     });
-});
 </script>
+
+
 <body>
-    <form id="frm">
+    <form >
         <p>First Name:</p>
-        <input type="text"  id="inp1" placeholder="Micky"></input>
+        <input type="text"  id="inp" placeholder="Micky"></input>
         <p>Last Name:</p>
-        <input type="text"  id="inp2" placeholder="Mouse"></input>
+        <input type="text"  id="inp" placeholder="Mouse"></input>
         <button type="button" class="btn">Submit</button>
     </form>
 </body>
