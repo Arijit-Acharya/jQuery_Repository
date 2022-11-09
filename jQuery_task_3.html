@@ -34,20 +34,23 @@
             for(let i = 0;i<length;i++ ){
                 if($(x[i]).val().trim() == ""){
                     alert("Please enter all the fields.");
+                    break;
                 }
-            } 
+            }
+           
         });
     });
 </script>
 
 
 <body>
-    <form >
+    <form id="frm">
         <p>First Name:</p>
-        <input type="text"  id="inp" placeholder="Micky"></input>
+        <input type="text"  class="inp" placeholder="Micky"></input>
         <p>Last Name:</p>
-        <input type="text"  id="inp" placeholder="Mouse"></input>
+        <input type="text"  class="inp" placeholder="Mouse"></input>
         <button type="button" class="btn">Submit</button>
+
     </form>
 </body>
 
